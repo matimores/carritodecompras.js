@@ -1,169 +1,200 @@
-alert('CARRITO DE COMPRAS');
 
-let productos = prompt("¿Que Productos desea llevar?          1-CAMARA   2-PANELES   3-INVERSOR-Solar   4-BATERIAS  5-ALARMAS");
+const Termicas = [{ marca: 'TERMICA SHCNEIDER', info: 'Tetrapolar 30am ', item: 0 }];
 
-let precio = parseInt(prompt("Introduce el precio:"));
+
+
+alert("BIENVENIDO AL CARRITO DE COMPRAS");
+confirm("¿DESEA VER TODOS LOS PRODUCTOS QUE TENEMOS?");
+
+for (const ProdGen in ProductosGenerales) {
+    console.log(ProdGen + ':' + ProductosGenerales[ProdGen]);
+
+}
+Termicas.forEach((Term) => {
+    console.log(Term);
+})
+
+
+confirm("¿DESEA LLEVAR ALGUN PRODUCTO?");
+
+let productos = prompt("¿Que Productos desea llevar?         1️⃣-CAMARA(Hikvision)        2️⃣-CAMARA(Dahua)        3️⃣-PANELSOLAR        4️⃣-INVERSOR(Voltronic)        5️⃣-BATERIA(Ultracell200ah)        6️⃣-REGULADORSOLAR(20ah)       7️⃣-TERMICAS + ESTRUCTURA");
+
+
+
+
 
 let cantidad = parseInt(prompt("Introduce la cantidad:"));
 
 let total;
 
-function camara(precio, cantidad) {
-
-    return precio * cantidad;
-
-}
-function paneles(precio, cantidad) {
-
-    return precio * cantidad;
-
-}
-function inversorsolar(precio, cantidad) {
-
-    return precio * cantidad;
-
-}
-function baterias(precio, cantidad) {
-
-    return precio * cantidad;
-
-}
-function alarma(precio, cantidad) {
-
-    return precio * cantidad;
-
-}
-
-
 switch (productos) {
     case "1":
-        total = camara(precio, cantidad);
-        console.log("CAMARA");
+        total = producto1.total();
+        console.log(producto1.marca);
+        console.log('Modelo:' + producto1.info);
         console.log(cantidad, 'Unidades');
-        console.log('Precio', ('$'), precio, 'Por unidad');
+        console.log('Precio', ('$'), producto1.precio, 'Por unidad');
         console.log("El total de la compra es: " + ('$'), total);
         break;
+
     case "2":
-        total = paneles(precio, cantidad);
-        console.log('PANELES');
+        total = producto2.total();
+        console.log(producto2.marca);
+        console.log('Modelo:' + producto2.info);
         console.log(cantidad, 'Unidades');
-        console.log('Precio', ('$'), precio, 'Por unidad');
+        console.log('Precio', ('$'), producto2.precio, 'Por unidad');
         console.log("El total de la compra es: " + ('$'), total);
         break;
 
     case "3":
-        total = inversorsolar(precio, cantidad);
-        console.log('inversor solar');
+        total = producto3.total();
+        console.log(producto3.marca);
+        console.log('Modelo:' + producto3.info);
         console.log(cantidad, 'Unidades');
-        console.log('Precio', ('$'), precio, 'Por unidad');
+        console.log('Precio', ('$'), producto3.precio, 'Por unidad');
         console.log("El total de la compra es: " + ('$'), total);
         break;
+
     case "4":
-        total = baterias(precio, cantidad);
-        console.log('baterias');
+        total = producto4.total();
+        console.log(producto4.marca);
+        console.log('Modelo:' + producto4.info);
         console.log(cantidad, 'Unidades');
-        console.log('Precio', ('$'), precio, 'Por unidad');
+        console.log('Precio', ('$'), producto4.precio, 'Por unidad');
         console.log("El total de la compra es: " + ('$'), total);
         break;
+
     case "5":
-        total = alarma(precio, cantidad);
-        console.log('ALARMA');
+        total = producto5.total();
+        console.log(producto5.marca);
+        console.log('Modelo:' + producto5.info);
         console.log(cantidad, 'Unidades');
-        console.log('Precio', ('$'), precio, 'Por unidad');
+        console.log('Precio', ('$'), producto5.precio, 'Por unidad');
         console.log("El total de la compra es: " + ('$'), total);
         break;
+
+    case "6":
+        total = producto6.total();
+        console.log(producto6.marca);
+        console.log('Modelo:' + producto6.info);
+        console.log(cantidad, 'Unidades');
+        console.log('Precio', ('$'), producto6.precio, 'Por unidad');
+        console.log("El total de la compra es: " + ('$'), total);
+        break;
+    case "7":
+        total = cantidad;
+        console.log(cantidad + '   TERMICAS SCHNEIDER 30am ');
+
+
+
 }
-
-
-
-
-///////////     REPITO EL CODIGO (no se como poner todo lo de arriba dentro del while para que se vuelva a repetir , si bien repito todo, el funcionamiento que queria hacer funciona bien)
 
 let agregar = prompt("Desea agregar algo mas? SI/NO");
 let no = 'no';
 
+
+
+
+
+
 if (agregar !== 'si') {
-    alert("MUCHAS GRACIAS POR LA COMPRA 🛒!");
+    alert("MUCHAS GRACIAS POR LA COMPRA 🙌");
 }
+
+
+///////////     REPITO EL CODIGO (no se como poner todo lo de arriba dentro del while para que se vuelva a repetir , si bien repito todo, el funcionamiento que queria hacer funciona bien)
+
+
+
 
 while (agregar == 'si') {
 
-    let productos = prompt("¿Que Productos desea llevar?       1-CAMARA   2-PANELES   3-INVERSOR-Solar   4-BATERIAS  5-ALARMAS");
 
-    let precio = parseInt(prompt("Introduce el precio:"));
+    let productos = prompt("¿Que Productos desea llevar?        1️⃣-CAMARA(Hikvision)        2️⃣-CAMARA(Dahua)        3️⃣-PANELSOLAR        4️⃣-INVERSOR(Voltronic)        5️⃣-BATERIA(Ultracell200ah)        6️⃣-REGULADORSOLAR(20ah)        7️⃣-TERMICAS + ESTRUCTURA");
 
     let cantidad = parseInt(prompt("Introduce la cantidad:"));
 
     let total;
 
-    function camara(precio, cantidad) {
-
-        return precio * cantidad;
-
-    }
-    function paneles(precio, cantidad) {
-
-        return precio * cantidad;
-
-    }
-    function inversorsolar(precio, cantidad) {
-
-        return precio * cantidad;
-
-    }
-    function baterias(precio, cantidad) {
-
-        return precio * cantidad;
-
-    }
-    function alarma(precio, cantidad) {
-
-        return precio * cantidad;
-
-    }
-
-
     switch (productos) {
         case "1":
-            total = camara(precio, cantidad);
-            console.log("CAMARA");
+            total = producto1.total();
+            console.log(producto1.marca);
+            console.log('Modelo:' + producto1.info);
             console.log(cantidad, 'Unidades');
-            console.log('Precio', ('$'), precio, 'Por unidad');
+            console.log('Precio', ('$'), producto1.precio, 'Por unidad');
             console.log("El total de la compra es: " + ('$'), total);
             break;
+
         case "2":
-            total = paneles(precio, cantidad);
-            console.log('PANELES');
+            total = producto2.total();
+            console.log(producto2.marca);
+            console.log('Modelo:' + producto2.info);
             console.log(cantidad, 'Unidades');
-            console.log('Precio', ('$'), precio, 'Por unidad');
+            console.log('Precio', ('$'), producto2.precio, 'Por unidad');
             console.log("El total de la compra es: " + ('$'), total);
             break;
+
         case "3":
-            total = inversorsolar(precio, cantidad);
-            console.log('inversor solar');
+            total = producto3.total();
+            console.log(producto3.marca);
+            console.log('Modelo:' + producto3.info);
             console.log(cantidad, 'Unidades');
-            console.log('Precio', ('$'), precio, 'Por unidad');
+            console.log('Precio', ('$'), producto3.precio, 'Por unidad');
             console.log("El total de la compra es: " + ('$'), total);
             break;
+
         case "4":
-            total = baterias(precio, cantidad);
-            console.log('baterias');
+            total = producto4.total();
+            console.log(producto4.marca);
+            console.log('Modelo:' + producto4.info);
             console.log(cantidad, 'Unidades');
-            console.log('Precio', ('$'), precio, 'Por unidad');
+            console.log('Precio', ('$'), producto4.precio, 'Por unidad');
             console.log("El total de la compra es: " + ('$'), total);
             break;
 
         case "5":
-            total = alarma(precio, cantidad);
-            console.log('ALARMA');
+            total = producto5.total();
+            console.log(producto5.marca);
+            console.log('Modelo:' + producto5.info);
             console.log(cantidad, 'Unidades');
-            console.log('Precio', ('$'), precio, 'Por unidad');
+            console.log('Precio', ('$'), producto5.precio, 'Por unidad');
             console.log("El total de la compra es: " + ('$'), total);
             break;
+
+        case "6":
+            total = producto6.total();
+            console.log(producto6.marca);
+            console.log('Modelo:' + producto6.info);
+            console.log(cantidad, 'Unidades');
+            console.log('Precio', ('$'), producto6.precio, 'Por unidad');
+            console.log("El total de la compra es: " + ('$'), total);
+            break;
+        case "7":
+            totalTermicas = cantidad;
+            console.log(cantidad + '   TERMICAS SCHNEIDER 30am   ');
+
+
+
     }
     agregar = prompt("Desea agregar algo mas? SI/NO");
     if (agregar === no) {
-        alert("MUCHAS GRACIAS POR LA COMPRA 🛒!");
+        alert("MUCHAS GRACIAS POR LA COMPRA 🙌");
     }
 
+
+
 }
+
+
+
+if (agregar !== 'si') {
+    console.log('EL TOTAL DE TODOS LOS PRODUCTOS ES :  ' + '$', total);
+    console.log(' + ' , totalTermicas  , '  TERMICAS DE REGALO POR LA COMPRA DE ESTOS PRODUCTOS');
+}
+
+
+
+
+
+
